@@ -160,7 +160,7 @@ ENDIF ( ASSIMP_BUILD_NONFREE_C4D_IMPORTER )
 # macro to add the CMake Option ADD_ASSIMP_IMPORTER_<name> which enables compile of loader
 # this way selective loaders can be compiled (reduces filesize + compile time)
 MACRO(ADD_ASSIMP_IMPORTER name)
-	OPTION(ASSIMP_BUILD_${name}_IMPORTER "build the ${name} importer" TRUE)
+	OPTION(ASSIMP_BUILD_${name}_IMPORTER "build the ${name} importer" FALSE)
 	IF(ASSIMP_BUILD_${name}_IMPORTER)
 		LIST(APPEND ASSIMP_LOADER_SRCS ${ARGN})
 		SET(ASSIMP_IMPORTERS_ENABLED "${ASSIMP_IMPORTERS_ENABLED} ${name}")

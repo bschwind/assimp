@@ -134,7 +134,7 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/assimp-config.cmake"             "${C
 
 option ( ASSIMP_NO_EXPORT
     "Disable Assimp's export functionality."
-    OFF
+    ON
 )
 
 if( CMAKE_COMPILER_IS_GNUCXX )
@@ -238,7 +238,7 @@ ENDIF (ASSIMP_BUILD_NONFREE_C4D_IMPORTER)
 ADD_SUBDIRECTORY( code/ )
 option ( ASSIMP_BUILD_ASSIMP_TOOLS
     "If the supplementary tools for Assimp are built in addition to the library."
-    ON
+    OFF
 )
 IF ( ASSIMP_BUILD_ASSIMP_TOOLS )
     IF ( WIN32 )
@@ -261,7 +261,7 @@ ENDIF ( ASSIMP_BUILD_SAMPLES )
 
 option ( ASSIMP_BUILD_TESTS
     "If the test suite for Assimp is built in addition to the library."
-    ON
+    OFF
 )
 
 IF ( ASSIMP_BUILD_TESTS )
